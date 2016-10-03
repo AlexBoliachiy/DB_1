@@ -11,6 +11,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <tr bgcolor="#9acd32">
       <th>Название</th>
       <th>Фото</th>
+        <th>Цена</th>
     </tr>
     <xsl:for-each select="Notebooks/Notebook">
     <tr>
@@ -22,6 +23,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
        </img>
          </td>
        <td><xsl:value-of select="name"/></td>
+
+        <td><xsl:value-of select="worth"/></td>
     </tr>
     </xsl:for-each>
   </table>

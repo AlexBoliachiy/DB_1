@@ -40,5 +40,8 @@ def first():
                     new_text_fragment = etree.Element("fragment", type='text')
                     new_text_fragment.text = x
                     element.append(new_text_fragment)
-    # print(etree.tounicode(root, pretty_print=True))
+    #f.write(etree.tounicode(root, pretty_print=True))
+    #print(etree.tounicode(root, pretty_print=True))
+    with open("file.xml","wb") as f:
+        f.write(etree.tounicode(root, pretty_print=True).encode("utf-8"))
     return root
